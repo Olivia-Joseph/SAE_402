@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-black');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.home{
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    background-image: url(Background.jpg);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home__title{
+    font-family: 'Futura Black', sans-serif;
+    font-size: 7rem;
+    margin: 0;
+    padding: 0;
+    rotate: -5.5deg;
+}
+
+.home__images{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.home__level{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__txt__forest{
+    font-size: 2rem;
+    color: #BCC6CC;
+    font-weight: 500;
+    padding: 0;
+    padding-right: 6rem;
+    margin: 0;
+}
+
+.home__txt__mountains{
+    font-size: 2rem;
+    color: #0029FF;
+    font-weight: 500;
+    padding: 0;
+    padding-right: 6rem;
+    margin: 0;
+}
+
+.home__txt__streets{
+    font-size: 2rem;
+    color: #D70000;
+    font-weight: 500;
+    padding: 0;
+    padding-right: 6rem;
+    margin: 0;
+}
+
+.home__forest{
+    width: 25rem
+}
+
+.home__mountains{
+    width: 25rem;
+}
+
+.home__streets{
+    width: 25rem;
+}
+
+.home__play__forest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #fff 2px solid;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+    text-decoration: none;
+    margin-right: 6rem;
+}
+
+.home__play__forest:hover{
+    background-color: #BCC6CC;
+    color: #000;
+}
+
+.home__play__mountains{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #fff 2px solid;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+    text-decoration: none;
+    margin-right: 6rem;
+}
+
+.home__play__mountains:hover{
+    background-color: #0029FF;
+    color: #000;
+}
+
+.home__play__streets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #fff 2px solid;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+    text-decoration: none;
+    margin-right: 6rem;
+}
+
+.home__play__streets:hover{
+    background-color: #D70000;
+    color: #000;
+}
+
+.home__rules{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
