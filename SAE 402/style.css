@@ -1,0 +1,1418 @@
+@import url('https://fonts.cdnfonts.com/css/futura-black');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap'); 
+
+
+
+@font-face{
+  font-family: 'Futura Black';
+  src: url("./assets/fonts/Futura\ Black.ttf") format('truetype');
+  font-weight: 100 900;
+}
+
+/* /*
+Theme Name: sae402
+Theme URI:
+Author: enzo
+Author URI:
+Description:
+Version: 1.0
+
+*/
+
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+
+
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  
+}
+
+
+:root {
+
+  /**********************************Primary Tokens ****************************************/
+
+
+  --white: hsl(#FFFF);
+  --black: hsl(#000);
+
+
+
+  --very-dark-gray: rgb(31, 31, 31);
+  --very-light-gray: hsla(0, 0%, 96%, 1);
+  --grayish-blue: hsla(203, 14%, 77%, 1);
+  --orange: hsla(25, 100%, 50%, 1);
+  --gold: hsla(43, 100%, 39%, 1);
+  --light-gold: rgb(217, 182, 94);
+--dark-gray: hsla(0, 0%, 16%, 1); 
+
+
+
+  --light-blue:hsla(218, 52%, 49%, 1); 
+  --light-green: hsla(195, 26%, 24%, 1); 
+  --dark-purple: hsla(247, 59%, 48%, 1); 
+
+
+  --f-title: "Futura Black", sans-serif; 
+  --ff: "Orbitron", sans-serif;
+  --fw-xl: 700;
+  --fw-sm: 400;
+  --fs-lg: 20px;
+  --fs-sm: 16px;
+  --fs-xl: 25px;
+  --fs-2xl: 29px;
+  --fs-3xl: 39px;
+
+
+
+
+
+
+
+  /*************************************Sementic Tokens ***********************************************/
+
+
+
+  --background: var(--very-light-gray);
+  --light-text-clr: white;
+  --dark-text-clr: var(--very-dark-gray);
+
+  --primary-color: var(--gold);
+  --light-primary-color: var(--light-gold);
+  --secondary-color: var(--grayish-blue);
+  --primary-bright-color: var(--orange);
+
+  --forest-clr: var(--light-green);
+  --mont-clr: var(--light-blue);  
+  --city-clr:var(--dark-purple); 
+  --dark-bg: var(--dark-gray); 
+
+
+
+  --nav-grad: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+
+  --nav-fw: var(--fw-xl);
+  --text-fw: var(--fw-sm);
+  --title-fw: var(--fw-xl);
+
+
+  --nav-fs: var(--fs-lg);
+  --text-fs: var(--fs-sm);
+  --title-fs: var(--fs-xl);
+  --btn-fs: var(--fs-2xl);
+  --big-btn-fs: var(--fs-3xl);
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.logo{
+  width: 68px;
+  height: 68px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************     NAV     ******************************************/
+
+
+.nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20rem;
+  background-color: #000;
+  font-family: var(--ff);
+  font-weight: var(--nav-fw);
+  font-size: var(--navfs);
+  text-decoration: none;
+  color: var(--light-text-clr);
+
+
+
+}
+
+.nav__link-contain{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.nav__link-contain .menu-item a{
+  position: relative;
+  font-size: var(--nav-fs);
+  letter-spacing: 2.5px;
+  overflow: hidden;
+}
+
+
+.nav__link-contain .menu-item a:after{
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -15px;
+  left: 0%;
+  background-color: var(--light-primary-color);
+  transition: all 0.2s ease 0s;
+
+}
+
+.nav__link-contain .menu-item a:hover:after{
+  width: 100%;
+}
+
+
+
+
+.nav__list-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--white);
+  font-size: var(--nav-fs);
+  transition: all 0.3s ease 0s;
+}
+
+.nav__link:hover {
+  color: var(--light-primary-color);
+}
+
+
+.nav__btn {
+  text-decoration: none;
+  position: relative;
+  background: none;
+  border: none;
+  width: min-content;
+  padding: 8px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 4px solid white;
+  color: var(--white);
+  font-size: var(--nav-fs);
+  transition: all 0.2s ease 0s;
+  overflow: hidden;
+}
+
+.nav__btn::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-primary-color);
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  transition: all 0.2s ease 0s;
+  z-index: -1;
+
+
+}
+
+
+.nav__btn:hover::before{
+z-index: -1;
+left: 0;  
+
+}
+
+
+.nav__btn:hover{
+  scale: 1.03;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  scroll-snap-type: y mandatory;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** Home Page ******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+.home__content {
+  display: flex;
+  justify-content: center;
+  background-image: url("./assets/images/bg.png");
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+}
+
+
+
+
+.home__main {
+  display: flex;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15rem;
+
+}
+
+.home__main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem
+}
+
+.home__main-title {
+  font-family: var(--f-title);
+  font-weight: var(--title-fw);
+  font-size: var(--big-btn-fs);
+  color: var(--light-text-clr);
+}
+
+
+
+.home__main-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home__main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: none;
+  border: none;
+
+
+  padding: 1rem 1rem;
+  font-family: var(--ff);
+  font-size: var(--big-btn-fs);
+  font-weight: var(--title-fw);
+  border: 2px solid var(--light-text-clr);
+  color: var(--light-text-clr);
+  transition: all 0.3s ease 0s;
+
+}
+
+.home__main-button:hover {
+  scale: 1.05;
+}
+
+
+
+
+.mouse {
+  width: 2rem;
+  height: 3.5rem;
+  border: 2px solid var(--light-text-clr);
+  border-radius: 15px;
+  position: relative;
+ 
+
+
+}
+
+.mouse:before {
+  content: "";
+  width: 6px;
+  height: 8px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: var(--light-text-clr);
+  opacity: 1;
+  animation: mouse 2s infinite;
+  top: 10%;
+  left: 35%;
+}
+
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 10%;
+  }
+
+  to {
+    opacity: 0;
+    top: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************** presentation ***************************/
+
+
+
+
+
+.presentation__section{
+  display: flex;
+  height: 400px;
+  width: 100%;
+  background-color: #000;
+  color: white;
+}
+
+
+
+.presentation__content{
+  padding: 80px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+.presentation__info{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 4rem;
+  align-items: start;
+  justify-content: center;
+  font-family: var(--ff);
+}
+
+.presentation__img{
+  height: 100%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.presentation__title{
+  font-family: var(--f-title);
+  font-size: var(--btn-fs);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************** Map Details ********************************************/
+
+
+
+
+
+
+
+
+
+
+
+.map__section{
+  display: flex;
+  height: 900px;
+  width: 100%;
+  background: var(--secondary-color);
+}
+
+.map__title{
+  font-family: var(--f-title);
+  font-size: var(--big-btn-fs);
+}
+
+.map__desc{
+  font-size: var(--title-fs);
+  text-align: center;
+}
+
+.map__content-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+
+.map__content{
+  display: flex;
+  width: 100%;
+  padding: 80px;
+  align-items: center;
+  flex-direction: column ;
+  gap: 150px;
+  font-family: var(--ff);
+}
+
+
+.map__cards{
+  display: flex;
+  width: 100%;
+  padding: 90px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.map__card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23rem;
+  height: 28rem;
+  display: flex;
+  align-items: center;
+  background: white;
+  overflow: hidden;
+  transition: all 0.6s ease 0s;
+
+
+}
+
+
+
+#imgCard1{
+  width:100% ;
+  height: 200px;
+  background-image: url("./assets/images/forest-card.jpg");
+  background-position-x: center;
+  background-position-y: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s ease 0s;
+
+}
+#imgCard2{
+  width:100% ;
+  height: 200px;
+  background-image: url("./assets/images/mont-card.jpg");
+  background-position-x: center;
+  background-position-y: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s ease 0s;
+
+}
+#imgCard3{
+  width:100% ;
+  height: 200px;
+  background-image: url("./assets/images/city-card.jpg");
+  background-position-x: center;
+  background-position-y: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s ease 0s;
+
+}
+
+
+
+
+.map__card-info{
+  font-family: 'arial';
+  padding: 2rem ;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: column;
+
+}
+
+
+.map__card-title{
+  font-family: var(--f-title);
+  font-size: var(--btn-fs);
+  font-weight: var(--title-fw);
+}
+
+
+
+
+
+
+.map__card-desc{
+  width: 16rem;
+  font-size: var(--text-fs);
+  font-weight: var(--text-fw);
+
+  transition: all 0.8s ease 0s;
+
+}
+
+
+
+.map__card-bot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem; 
+  width: 100%;
+  color: var(--light-text-clr);
+
+}
+
+#card1{
+ 
+  background-color: var(--forest-clr) ;  
+
+}
+
+
+#card2{
+ 
+  background-color: var(--mont-clr) ;  
+
+}
+
+#card3{
+  background-color: var(--city-clr) ;  
+
+  
+}
+
+
+
+.map__card:hover{
+.map__card-title{
+ color: var(--primary-bright-color);
+}
+  scale: 1.02;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.169);
+
+}
+
+
+
+/************************************************************Gameplay***************************************/
+
+
+
+
+
+
+
+
+ .gameplay__section{
+  width: 100%;
+  height: 1020px;
+  padding: 40px;
+  gap: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--light-primary-color);
+  color: white;
+ }
+
+
+ .gameplay__top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+ }
+
+
+.gameplay__title{
+  font-family: var(--f-title);
+  font-size: var(--btn-fs);
+  font-weight: var(--nav-fw);
+}
+
+.gameplay__desc{
+  width: 800px;
+  font-family: var(--ff);
+  font-size: var(--text-fs) ;
+  font-weight: var(--title-fw);
+}
+
+
+.gameplay__cards{
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gameplay__card{
+  height: 500px;
+  width: 380px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.gameplay__img{
+  background-image: url("./assets/images/aston-gmp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.gameplay__card-info{
+  height: 100%;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameplay__card-title{
+  font-family: var(--ff);
+  font-size: var(--title-fs) ;
+  font-weight: var(--title-fw);
+}
+
+
+.gameplay__card-desc{
+  font-family: var(--ff);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************* Call to action **************************/
+
+
+
+
+.cta__section{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+
+.cta__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position:relative; 
+}
+
+.cta__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  color: white;
+  font-family: var(--ff);
+  height: 500px;
+  width: 100%;
+}
+
+.cta__video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+
+.cta__container::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 70%;
+  z-index: -99;
+}
+
+
+.cta__title{
+  font-family: var(--f-title);
+  font-size: var(--big-btn-fs);
+
+}
+
+.cta__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  position: relative;
+  padding: 1rem 1rem;
+  font-family: var(--ff);
+  font-size: var(--btn-fs);
+  font-weight: var(--title-fw);
+  border: 2px solid var(--light-text-clr);
+  color: var(--light-text-clr);
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+
+}
+
+
+
+.cta__button::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-primary-color);
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  transition: all 0.2s ease 0s;
+  z-index: -1;
+}
+
+
+.cta__button:hover::before{
+  z-index: -1;
+  left: 0;  
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************ footer *********************************************************/
+
+
+.footer{
+  height: 450px;
+  gap: 4rem;
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background);
+  
+
+
+}
+
+
+.footer__title{
+  font-family: 'Futura Black';
+  font-size: var(--big-btn-fs);
+}
+
+
+.footer__content{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.footer__svg{
+  height: 58px;
+  width: 58px;
+  transition: 300ms all ease-in-out;
+  position: relative;
+}
+
+
+.footer__svg:hover{
+  translate: -0px -10px;
+  scale: 1.1;
+}
+
+
+
+
+.footer__socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 995px;
+  justify-content: space-between;
+
+  
+}
+
+.footer__content-bot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row ;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0;
+  font-family:var(--ff) ;
+  
+}
+
+.footer__conditions{
+  padding: 1rem .5rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************* Media Queery *************************************************/
+
+
+
+
+@media screen and (max-width: 800px) {
+
+  body{
+    font-size: 14px;
+  }
+
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 0;
+
+  }
+
+  .nav__
+
+  .nav__btn{
+    text-decoration: none;
+    position: relative;
+    background: none;
+    border: none;
+    width: min-content;
+    padding: 8px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 4px solid white;
+    color: var(--white);
+    font-size: var(--nav-fs);
+    transition: all 0.2s ease 0s;
+    overflow: hidden;
+  }
+  .nav__link-contain{
+    display: none;
+  }
+  .home__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  .home__main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+.presentation__img{
+  height: 200px;
+  width: 100%;
+}
+
+  .presentation__section{
+    height: min-content;
+  }
+
+  .presentation__info{
+    width: auto;
+  }
+
+
+  .presentation__content{
+    display: flex;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem;
+
+  }
+
+  .map__section{
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .map__title{
+    font-size: 20px;
+
+  }
+
+
+
+.map__cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+  .map__card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23rem;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    background: white;
+    overflow: hidden;
+    transition: all 0.6s ease 0s;
+  
+  
+  }
+
+
+  .map__card-title{
+    font-size: 16px;
+  }
+
+
+  .map__card-desc{
+    width: auto;
+  }
+
+  .gameplay__section{
+    height: 100vh;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
+  .gameplay__title{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .gameplay__desc{
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .gameplay__cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+.gameplay__img{
+  min-height: 150px;
+  width: 100%;
+}
+
+  .gameplay__card{
+    height: min-content;
+    width: 23rem;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .gameplay__card-title{
+    font-size: 16px;
+
+  }
+
+  .gameplay__card-desc{
+    font-size: 14px;
+    width: auto;
+    
+  }
+
+  .cta__section{
+    display: flex;
+    height: min-content;
+    width: 100%;
+    background-color: var(--dark-bg);
+  }
+
+  .cta__video{
+display: none;
+
+  }
+
+  .cta__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+    width: 100%;
+    background-color: var(--dark-bg);
+  }
+
+  .cta__container::before{
+display: none;
+
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: min-content;
+    width: 100%;
+  }
+
+
+    .footer__content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10rem;
+    }
+
+    .footer__socials{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10rem;
+
+    }
+
+    .footer__content-bot{
+      width: 100%;
+      padding: 0 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10rem;
+    }
+
+
+}
